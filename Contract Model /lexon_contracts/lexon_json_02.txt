@@ -1,0 +1,1160 @@
+[
+  {
+    "name": "LEX",
+    "version": "0.2.12",
+    "comments": [],
+    "toplevel_payable": true,
+    "term_payable": false,
+    "term_stmts": [
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Contract"
+          }
+        },
+        "fillers": [],
+        "original": "\"Financing_Statement\" is this contract",
+        "varnames": [
+          "Financing_Statement"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Data"
+          }
+        },
+        "fillers": [],
+        "original": "\"File_Number\" is data",
+        "varnames": [
+          "File_Number"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Time"
+          }
+        },
+        "fillers": [],
+        "original": "\"Initial_Statement_Date\" is a time",
+        "varnames": [
+          "Initial_Statement_Date"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Person"
+          }
+        },
+        "fillers": [],
+        "original": "\"Filer\" is a person",
+        "varnames": [
+          "Filer"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Person"
+          }
+        },
+        "fillers": [],
+        "original": "\"Debtor\" is a person",
+        "varnames": [
+          "Debtor"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Person"
+          }
+        },
+        "fillers": [],
+        "original": "\"Secured_Party\" is a person",
+        "varnames": [
+          "Secured_Party"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Person"
+          }
+        },
+        "fillers": [],
+        "original": "\"Filing_Office\" is a person",
+        "varnames": [
+          "Filing_Office"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Data"
+          }
+        },
+        "fillers": [],
+        "original": "\"Collateral\" is data",
+        "varnames": [
+          "Collateral"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Amount"
+          }
+        },
+        "fillers": [],
+        "original": "\"Digital_Asset_Collateral\" is an amount",
+        "varnames": [
+          "Digital_Asset_Collateral"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Amount"
+          }
+        },
+        "fillers": [],
+        "original": "\"Reminder_Fee\" is an amount",
+        "varnames": [
+          "Reminder_Fee"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Time"
+          }
+        },
+        "fillers": [],
+        "original": "\"Continuation_Window_Start\" is a time",
+        "varnames": [
+          "Continuation_Window_Start"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Time"
+          }
+        },
+        "fillers": [],
+        "original": "\"Continuation_Statement_Date\" is a time",
+        "varnames": [
+          "Continuation_Statement_Date"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Data"
+          }
+        },
+        "fillers": [],
+        "original": "\"Continuation_Statement_Filing_Number\" is data",
+        "varnames": [
+          "Continuation_Statement_Filing_Number"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Time"
+          }
+        },
+        "fillers": [],
+        "original": "\"Lapse_Date\" is a time",
+        "varnames": [
+          "Lapse_Date"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Binary"
+          }
+        },
+        "fillers": [],
+        "original": "\"Default\" is a binary",
+        "varnames": [
+          "Default"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Binary"
+          }
+        },
+        "fillers": [],
+        "original": "\"Continuation_Statement\" is a binary",
+        "varnames": [
+          "Continuation_Statement"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Binary"
+          }
+        },
+        "fillers": [],
+        "original": "\"Termination_Statement\" is a binary",
+        "varnames": [
+          "Termination_Statement"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Time"
+          }
+        },
+        "fillers": [],
+        "original": "\"Termination_StatementTime\" is a time",
+        "varnames": [
+          "Termination_StatementTime"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Text"
+          }
+        },
+        "fillers": [],
+        "original": "\"Notification_Statement\" is a text",
+        "varnames": [
+          "Notification_Statement"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Binary"
+          }
+        },
+        "fillers": [],
+        "original": "\"Default\" is a binary",
+        "varnames": [
+          "Default"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Fix": null
+        },
+        "fillers": [
+          "The ",
+          "the "
+        ],
+        "original": "The Filer fixes the Filing_Office",
+        "varnames": [
+          "Filer",
+          "Filing_Office"
+        ]
+      },
+      {
+        "stmt": {
+          "And": ","
+        },
+        "fillers": [],
+        "original": ",",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Fix": null
+        },
+        "fillers": [
+          "the "
+        ],
+        "original": "fixes the Debtor",
+        "varnames": [
+          "Debtor"
+        ]
+      },
+      {
+        "stmt": {
+          "And": ","
+        },
+        "fillers": [],
+        "original": ",",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Fix": null
+        },
+        "fillers": [
+          "the "
+        ],
+        "original": "fixes the Secured_Party",
+        "varnames": [
+          "Secured_Party"
+        ]
+      },
+      {
+        "stmt": {
+          "And": ","
+        },
+        "fillers": [],
+        "original": "and ",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Fix": null
+        },
+        "fillers": [
+          "the "
+        ],
+        "original": "fixes the Collateral",
+        "varnames": [
+          "Collateral"
+        ]
+      }
+    ],
+    "term_chpts": [
+      {
+        "name": "Certify",
+        "payable": false,
+        "statements": [
+          {
+            "stmt": {
+              "May": [
+                "filing_office",
+                [
+                  {
+                    "stmt": {
+                      "Certify": [
+                        "",
+                        [
+                          "File_Number"
+                        ]
+                      ]
+                    },
+                    "fillers": [],
+                    "original": "certify the File_Number",
+                    "varnames": []
+                  }
+                ]
+              ]
+            },
+            "fillers": [
+              "The "
+            ],
+            "original": "The Filing_Office may certify the File_Number.",
+            "varnames": []
+          }
+        ],
+        "ret": []
+      },
+      {
+        "name": "Set_File_Date",
+        "payable": false,
+        "statements": [
+          {
+            "stmt": {
+              "May": [
+                "filing_office",
+                [
+                  {
+                    "stmt": {
+                      "Fix": {
+                        "ops": [],
+                        "terms": [
+                          {
+                            "ops": [],
+                            "factors": [
+                              {
+                                "Time": "now"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "fillers": [
+                      "the "
+                    ],
+                    "original": "fix the Initial_Statement_Date as the current time",
+                    "varnames": [
+                      "Initial_Statement_Date"
+                    ]
+                  }
+                ]
+              ]
+            },
+            "fillers": [
+              "The "
+            ],
+            "original": "The Filing_Office may fix the Initial_Statement_Date as the current time.",
+            "varnames": []
+          }
+        ],
+        "ret": []
+      },
+      {
+        "name": "Set_Lapse",
+        "payable": false,
+        "statements": [
+          {
+            "stmt": {
+              "May": [
+                "filing_office",
+                [
+                  {
+                    "stmt": {
+                      "Fix": {
+                        "ops": [],
+                        "terms": [
+                          {
+                            "ops": [],
+                            "factors": [
+                              {
+                                "Sym": {
+                                  "sym": "now",
+                                  "given": false,
+                                  "filler": ""
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "fillers": [
+                      "the "
+                    ],
+                    "original": "fix the Lapse_Date as now",
+                    "varnames": [
+                      "Lapse_Date"
+                    ]
+                  }
+                ]
+              ]
+            },
+            "fillers": [
+              "The "
+            ],
+            "original": "The Filing_Office may fix the Lapse_Date as now.",
+            "varnames": []
+          }
+        ],
+        "ret": []
+      },
+      {
+        "name": "Pay_Escrow_In",
+        "payable": true,
+        "statements": [
+          {
+            "stmt": {
+              "May": [
+                "debtor",
+                [
+                  {
+                    "stmt": {
+                      "Pay": {
+                        "who": null,
+                        "from": null,
+                        "exp": {
+                          "ops": [],
+                          "terms": [
+                            {
+                              "ops": [],
+                              "factors": [
+                                {
+                                  "Sym": {
+                                    "sym": "digital_asset_collateral",
+                                    "given": false,
+                                    "filler": "the "
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        "to": {
+                          "sym": "escrow",
+                          "given": false,
+                          "filler": ""
+                        }
+                      }
+                    },
+                    "fillers": [],
+                    "original": "pay the Digital_Asset_Collateral into escrow",
+                    "varnames": []
+                  }
+                ]
+              ]
+            },
+            "fillers": [
+              "The "
+            ],
+            "original": "The Debtor may pay the Digital_Asset_Collateral into escrow.",
+            "varnames": []
+          }
+        ],
+        "ret": []
+      },
+      {
+        "name": "Fail_to_Pay",
+        "payable": false,
+        "statements": [
+          {
+            "stmt": {
+              "May": [
+                "secured_party",
+                [
+                  {
+                    "stmt": {
+                      "Fix": {
+                        "ops": [],
+                        "terms": [
+                          {
+                            "ops": [],
+                            "factors": [
+                              {
+                                "Sym": {
+                                  "sym": "true",
+                                  "given": false,
+                                  "filler": ""
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "fillers": [],
+                    "original": "fix Default as true",
+                    "varnames": [
+                      "Default"
+                    ]
+                  }
+                ]
+              ]
+            },
+            "fillers": [
+              "The "
+            ],
+            "original": "The Secured_Party may fix Default as true.",
+            "varnames": []
+          }
+        ],
+        "ret": []
+      },
+      {
+        "name": "Take_Possession",
+        "payable": false,
+        "statements": [
+          {
+            "stmt": {
+              "If": {
+                "cond": {
+                  "ops": [],
+                  "exprs": [
+                    {
+                      "Is": [
+                        "Default",
+                        "is",
+                        {
+                          "ops": [],
+                          "terms": [
+                            {
+                              "ops": [],
+                              "factors": [
+                                {
+                                  "Sym": {
+                                    "sym": "true",
+                                    "given": false,
+                                    "filler": ""
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "ontrue": [
+                  {
+                    "stmt": {
+                      "May": [
+                        "filing_office",
+                        [
+                          {
+                            "stmt": {
+                              "Pay": {
+                                "who": null,
+                                "from": null,
+                                "exp": {
+                                  "ops": [],
+                                  "terms": [
+                                    {
+                                      "ops": [],
+                                      "factors": [
+                                        {
+                                          "Sym": {
+                                            "sym": "digital_asset_collateral",
+                                            "given": false,
+                                            "filler": "the "
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "to": {
+                                  "sym": "secured_party",
+                                  "given": false,
+                                  "filler": "the "
+                                }
+                              }
+                            },
+                            "fillers": [],
+                            "original": "pay the Digital_Asset_Collateral to the Secured_Party",
+                            "varnames": []
+                          }
+                        ]
+                      ]
+                    },
+                    "fillers": [
+                      "the "
+                    ],
+                    "original": "the Filing_Office may pay the Digital_Asset_Collateral to the Secured_Party.",
+                    "varnames": []
+                  }
+                ],
+                "onfalse": []
+              }
+            },
+            "fillers": [],
+            "original": "If Default is true then the Filing_Office may pay the Digital_Asset_Collateral to the Secured_Party.\n\n",
+            "varnames": []
+          }
+        ],
+        "ret": []
+      },
+      {
+        "name": "File_Continuation",
+        "payable": false,
+        "statements": [
+          {
+            "stmt": {
+              "May": [
+                "secured_party",
+                [
+                  {
+                    "stmt": {
+                      "Fix": {
+                        "ops": [],
+                        "terms": [
+                          {
+                            "ops": [],
+                            "factors": [
+                              {
+                                "Sym": {
+                                  "sym": "true",
+                                  "given": false,
+                                  "filler": ""
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "fillers": [
+                      "the "
+                    ],
+                    "original": "fix the Continuation_Statement as true",
+                    "varnames": [
+                      "Continuation_Statement"
+                    ]
+                  }
+                ]
+              ]
+            },
+            "fillers": [
+              "The "
+            ],
+            "original": "The Secured_Party may fix the Continuation_Statement as true.",
+            "varnames": []
+          }
+        ],
+        "ret": []
+      },
+      {
+        "name": "Set_Continuation_Lapse",
+        "payable": false,
+        "statements": [
+          {
+            "stmt": {
+              "If": {
+                "cond": {
+                  "ops": [],
+                  "exprs": [
+                    {
+                      "Is": [
+                        "Continuation_Statement",
+                        "is",
+                        {
+                          "ops": [],
+                          "terms": [
+                            {
+                              "ops": [],
+                              "factors": [
+                                {
+                                  "Sym": {
+                                    "sym": "true",
+                                    "given": false,
+                                    "filler": ""
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "ontrue": [
+                  {
+                    "stmt": {
+                      "May": [
+                        "filing_office",
+                        [
+                          {
+                            "stmt": {
+                              "Fix": null
+                            },
+                            "fillers": [
+                              "the "
+                            ],
+                            "original": "fix the Continuation_Statement_Date",
+                            "varnames": [
+                              "Continuation_Statement_Date"
+                            ]
+                          }
+                        ]
+                      ]
+                    },
+                    "fillers": [
+                      "the "
+                    ],
+                    "original": "the Filing_Office may fix the Continuation_Statement_Date.",
+                    "varnames": []
+                  }
+                ],
+                "onfalse": []
+              }
+            },
+            "fillers": [],
+            "original": "If the Continuation_Statement is true then the Filing_Office may fix the Continuation_Statement_Date. \n\n",
+            "varnames": []
+          }
+        ],
+        "ret": []
+      },
+      {
+        "name": "File_Termination",
+        "payable": false,
+        "statements": [
+          {
+            "stmt": {
+              "May": [
+                "secured_party",
+                [
+                  {
+                    "stmt": {
+                      "Fix": {
+                        "ops": [],
+                        "terms": [
+                          {
+                            "ops": [],
+                            "factors": [
+                              {
+                                "Sym": {
+                                  "sym": "true",
+                                  "given": false,
+                                  "filler": ""
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "fillers": [],
+                    "original": "fix Termination_Statement as true",
+                    "varnames": [
+                      "Termination_Statement"
+                    ]
+                  },
+                  {
+                    "stmt": {
+                      "And": ","
+                    },
+                    "fillers": [],
+                    "original": "and ",
+                    "varnames": []
+                  },
+                  {
+                    "stmt": {
+                      "Fix": {
+                        "ops": [],
+                        "terms": [
+                          {
+                            "ops": [],
+                            "factors": [
+                              {
+                                "Time": "now"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "fillers": [
+                      "the "
+                    ],
+                    "original": "fix the Termination_StatementTime as the current time",
+                    "varnames": [
+                      "Termination_StatementTime"
+                    ]
+                  }
+                ]
+              ]
+            },
+            "fillers": [
+              "The "
+            ],
+            "original": "The Secured_Party may fix Termination_Statement as true,\nand fix the Termination_StatementTime as the current time.",
+            "varnames": []
+          }
+        ],
+        "ret": []
+      },
+      {
+        "name": "Release_Escrow",
+        "payable": false,
+        "statements": [
+          {
+            "stmt": {
+              "If": {
+                "cond": {
+                  "ops": [],
+                  "exprs": [
+                    {
+                      "Is": [
+                        "Termination_Statement",
+                        "is",
+                        {
+                          "ops": [],
+                          "terms": [
+                            {
+                              "ops": [],
+                              "factors": [
+                                {
+                                  "Sym": {
+                                    "sym": "true",
+                                    "given": false,
+                                    "filler": ""
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "ontrue": [
+                  {
+                    "stmt": {
+                      "May": [
+                        "filing_office",
+                        [
+                          {
+                            "stmt": {
+                              "Pay": {
+                                "who": null,
+                                "from": null,
+                                "exp": {
+                                  "ops": [],
+                                  "terms": [
+                                    {
+                                      "ops": [],
+                                      "factors": [
+                                        {
+                                          "Sym": {
+                                            "sym": "digital_asset_collateral",
+                                            "given": false,
+                                            "filler": "the "
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "to": {
+                                  "sym": "debtor",
+                                  "given": false,
+                                  "filler": "the "
+                                }
+                              }
+                            },
+                            "fillers": [],
+                            "original": "pay the Digital_Asset_Collateral to the Debtor",
+                            "varnames": []
+                          }
+                        ]
+                      ]
+                    },
+                    "fillers": [
+                      "The "
+                    ],
+                    "original": "The Filing_Office may pay the Digital_Asset_Collateral to the Debtor.",
+                    "varnames": []
+                  }
+                ],
+                "onfalse": []
+              }
+            },
+            "fillers": [],
+            "original": "If the Termination_Statement is true then The Filing_Office may pay the Digital_Asset_Collateral to the Debtor.\n\n",
+            "varnames": []
+          }
+        ],
+        "ret": []
+      },
+      {
+        "name": "Release_ReminderFee",
+        "payable": false,
+        "statements": [
+          {
+            "stmt": {
+              "If": {
+                "cond": {
+                  "ops": [],
+                  "exprs": [
+                    {
+                      "Is": [
+                        "Termination_Statement",
+                        "is",
+                        {
+                          "ops": [],
+                          "terms": [
+                            {
+                              "ops": [],
+                              "factors": [
+                                {
+                                  "Sym": {
+                                    "sym": "true",
+                                    "given": false,
+                                    "filler": ""
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "ontrue": [
+                  {
+                    "stmt": {
+                      "May": [
+                        "filing_office",
+                        [
+                          {
+                            "stmt": {
+                              "Pay": {
+                                "who": null,
+                                "from": null,
+                                "exp": {
+                                  "ops": [],
+                                  "terms": [
+                                    {
+                                      "ops": [],
+                                      "factors": [
+                                        {
+                                          "Sym": {
+                                            "sym": "reminder_fee",
+                                            "given": false,
+                                            "filler": "the "
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "to": {
+                                  "sym": "secured_party",
+                                  "given": false,
+                                  "filler": "the "
+                                }
+                              }
+                            },
+                            "fillers": [],
+                            "original": "pay the Reminder_Fee to the Secured_Party",
+                            "varnames": []
+                          }
+                        ]
+                      ]
+                    },
+                    "fillers": [
+                      "The "
+                    ],
+                    "original": "The Filing_Office may pay the Reminder_Fee to the Secured_Party.",
+                    "varnames": []
+                  }
+                ],
+                "onfalse": []
+              }
+            },
+            "fillers": [],
+            "original": "If the Termination_Statement is true then The Filing_Office may pay the Reminder_Fee to the Secured_Party.\n",
+            "varnames": []
+          }
+        ],
+        "ret": []
+      }
+    ],
+    "contracts": []
+  }
+]

@@ -1,0 +1,679 @@
+[
+  {
+    "name": "LEX",
+    "version": "0.2.12",
+    "comments": [
+      "6.c - a bet between two parties, with odds\n"
+    ],
+    "toplevel_payable": true,
+    "term_payable": false,
+    "term_stmts": [
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Person"
+          }
+        },
+        "fillers": [],
+        "original": "\"Placer” is a person",
+        "varnames": [
+          "Placer"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Person"
+          }
+        },
+        "fillers": [],
+        "original": "\"Holder” is a person",
+        "varnames": [
+          "Holder"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Person"
+          }
+        },
+        "fillers": [],
+        "original": "\"Judge” is a person",
+        "varnames": [
+          "Judge"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Binary"
+          }
+        },
+        "fillers": [],
+        "original": "\"Closed” is a binary",
+        "varnames": [
+          "Closed"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Contract"
+          }
+        },
+        "fillers": [],
+        "original": "\"Bet” is this contract",
+        "varnames": [
+          "Bet"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Be": {
+            "def": "Appointed",
+            "expression": null
+          }
+        },
+        "fillers": [
+          "The "
+        ],
+        "original": "The Judge is appointed",
+        "varnames": [
+          "Judge"
+        ]
+      }
+    ],
+    "term_chpts": [
+      {
+        "name": "Place_Bet",
+        "payable": true,
+        "statements": [
+          {
+            "stmt": {
+              "If": {
+                "cond": {
+                  "ops": [],
+                  "exprs": [
+                    {
+                      "Is": [
+                        "Bet",
+                        "isnot",
+                        {
+                          "ops": [],
+                          "terms": [
+                            {
+                              "ops": [],
+                              "factors": [
+                                {
+                                  "Sym": {
+                                    "sym": "closed",
+                                    "given": false,
+                                    "filler": ""
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "ontrue": [
+                  {
+                    "stmt": {
+                      "May": [
+                        "placer",
+                        [
+                          {
+                            "stmt": {
+                              "Pay": {
+                                "who": null,
+                                "from": null,
+                                "exp": {
+                                  "ops": [],
+                                  "terms": [
+                                    {
+                                      "ops": [],
+                                      "factors": [
+                                        {
+                                          "Sym": {
+                                            "sym": "amount",
+                                            "given": false,
+                                            "filler": "an"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "to": {
+                                  "sym": "escrow",
+                                  "given": false,
+                                  "filler": ""
+                                }
+                              }
+                            },
+                            "fillers": [],
+                            "original": "pay an Amount into escrow",
+                            "varnames": []
+                          },
+                          {
+                            "stmt": {
+                              "And": ","
+                            },
+                            "fillers": [],
+                            "original": "and also",
+                            "varnames": []
+                          },
+                          {
+                            "stmt": {
+                              "Fix": null
+                            },
+                            "fillers": [
+                              "the "
+                            ],
+                            "original": "fix the Odds",
+                            "varnames": [
+                              "Odds"
+                            ]
+                          }
+                        ]
+                      ]
+                    },
+                    "fillers": [
+                      "the "
+                    ],
+                    "original": "the Placer may pay an Amount into escrow,\nand also fix the Odds.",
+                    "varnames": []
+                  }
+                ],
+                "onfalse": []
+              }
+            },
+            "fillers": [],
+            "original": "If the Bet is not Closed then\nthe Placer may pay an Amount into escrow,\nand also fix the Odds.\n\n",
+            "varnames": []
+          }
+        ],
+        "ret": []
+      },
+      {
+        "name": "Hold_Bet",
+        "payable": true,
+        "statements": [
+          {
+            "stmt": {
+              "If": {
+                "cond": {
+                  "ops": [],
+                  "exprs": [
+                    {
+                      "Cmp": {
+                        "op": "Equal",
+                        "exp1": {
+                          "ops": [],
+                          "terms": [
+                            {
+                              "ops": [],
+                              "factors": [
+                                {
+                                  "Sym": {
+                                    "sym": "amount",
+                                    "given": false,
+                                    "filler": "the "
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        "exp2": {
+                          "ops": [],
+                          "terms": [
+                            {
+                              "ops": [
+                                "Mult"
+                              ],
+                              "factors": [
+                                {
+                                  "Sym": {
+                                    "sym": "escrow",
+                                    "given": false,
+                                    "filler": "the "
+                                  }
+                                },
+                                {
+                                  "Sym": {
+                                    "sym": "odds",
+                                    "given": false,
+                                    "filler": "the "
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                "ontrue": [
+                  {
+                    "stmt": {
+                      "May": [
+                        "holder",
+                        [
+                          {
+                            "stmt": {
+                              "Pay": {
+                                "who": null,
+                                "from": null,
+                                "exp": {
+                                  "ops": [],
+                                  "terms": [
+                                    {
+                                      "ops": [],
+                                      "factors": [
+                                        {
+                                          "Sym": {
+                                            "sym": "amount",
+                                            "given": false,
+                                            "filler": "the "
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "to": {
+                                  "sym": "escrow",
+                                  "given": false,
+                                  "filler": ""
+                                }
+                              }
+                            },
+                            "fillers": [],
+                            "original": "pay the Amount into escrow",
+                            "varnames": []
+                          },
+                          {
+                            "stmt": {
+                              "And": ","
+                            },
+                            "fillers": [],
+                            "original": "and then",
+                            "varnames": []
+                          },
+                          {
+                            "stmt": {
+                              "Be": {
+                                "def": "Undef",
+                                "expression": null
+                              }
+                            },
+                            "fillers": [
+                              "the "
+                            ],
+                            "original": "the Bet is deemed Closed",
+                            "varnames": [
+                              "Bet"
+                            ]
+                          }
+                        ]
+                      ]
+                    },
+                    "fillers": [
+                      "the "
+                    ],
+                    "original": "the Holder may pay the Amount into escrow,\nand then the Bet is deemed Closed.",
+                    "varnames": []
+                  }
+                ],
+                "onfalse": []
+              }
+            },
+            "fillers": [],
+            "original": "If the Amount is equal to the escrow times the Odds then\nthe Holder may pay the Amount into escrow,\nand then the Bet is deemed Closed.\n\n",
+            "varnames": []
+          }
+        ],
+        "ret": []
+      },
+      {
+        "name": "Payout",
+        "payable": false,
+        "statements": [
+          {
+            "stmt": {
+              "If": {
+                "cond": {
+                  "ops": [],
+                  "exprs": [
+                    {
+                      "Is": [
+                        "Bet",
+                        "is",
+                        {
+                          "ops": [],
+                          "terms": [
+                            {
+                              "ops": [],
+                              "factors": [
+                                {
+                                  "Sym": {
+                                    "sym": "closed",
+                                    "given": false,
+                                    "filler": ""
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "ontrue": [
+                  {
+                    "stmt": {
+                      "May": [
+                        "judge",
+                        [
+                          {
+                            "stmt": {
+                              "Pay": {
+                                "who": null,
+                                "from": null,
+                                "exp": {
+                                  "ops": [],
+                                  "terms": [
+                                    {
+                                      "ops": [],
+                                      "factors": [
+                                        {
+                                          "Sym": {
+                                            "sym": "escrow",
+                                            "given": false,
+                                            "filler": "the "
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "to": {
+                                  "sym": "placer",
+                                  "given": false,
+                                  "filler": "the "
+                                }
+                              }
+                            },
+                            "fillers": [],
+                            "original": "pay the escrow to the Placer",
+                            "varnames": []
+                          },
+                          {
+                            "stmt": "Sequence",
+                            "fillers": [],
+                            "original": ".",
+                            "varnames": []
+                          },
+                          {
+                            "stmt": {
+                              "If": {
+                                "cond": {
+                                  "ops": [],
+                                  "exprs": [
+                                    {
+                                      "Is": [
+                                        "Bet",
+                                        "is",
+                                        {
+                                          "ops": [],
+                                          "terms": [
+                                            {
+                                              "ops": [],
+                                              "factors": [
+                                                {
+                                                  "Sym": {
+                                                    "sym": "closed",
+                                                    "given": false,
+                                                    "filler": ""
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "ontrue": [
+                                  {
+                                    "stmt": {
+                                      "May": [
+                                        "judge",
+                                        [
+                                          {
+                                            "stmt": {
+                                              "Pay": {
+                                                "who": null,
+                                                "from": null,
+                                                "exp": {
+                                                  "ops": [],
+                                                  "terms": [
+                                                    {
+                                                      "ops": [],
+                                                      "factors": [
+                                                        {
+                                                          "Sym": {
+                                                            "sym": "escrow",
+                                                            "given": false,
+                                                            "filler": "the "
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                "to": {
+                                                  "sym": "holder",
+                                                  "given": false,
+                                                  "filler": "the "
+                                                }
+                                              }
+                                            },
+                                            "fillers": [],
+                                            "original": "pay the escrow to the Holder",
+                                            "varnames": []
+                                          }
+                                        ]
+                                      ]
+                                    },
+                                    "fillers": [
+                                      "the "
+                                    ],
+                                    "original": "the Judge may pay the escrow to the Holder.",
+                                    "varnames": []
+                                  },
+                                  {
+                                    "stmt": "Sequence",
+                                    "fillers": [],
+                                    "original": "In any case, afterwards",
+                                    "varnames": []
+                                  },
+                                  {
+                                    "stmt": {
+                                      "Be": {
+                                        "def": "Terminated",
+                                        "expression": null
+                                      }
+                                    },
+                                    "fillers": [
+                                      "the "
+                                    ],
+                                    "original": "the Bet is terminated",
+                                    "varnames": [
+                                      "Bet"
+                                    ]
+                                  }
+                                ],
+                                "onfalse": []
+                              }
+                            },
+                            "fillers": [],
+                            "original": "If the Bet is Closed then the Judge may pay the escrow to the Holder.\nIn any case, afterwards the Bet is terminated.\n\n",
+                            "varnames": []
+                          }
+                        ]
+                      ]
+                    },
+                    "fillers": [
+                      "the "
+                    ],
+                    "original": "the Judge may pay the escrow to the Placer.\nIf the Bet is Closed then the Judge may pay the escrow to the Holder.\nIn any case, afterwards the Bet is terminated.\n\n",
+                    "varnames": []
+                  }
+                ],
+                "onfalse": []
+              }
+            },
+            "fillers": [],
+            "original": "If the Bet is Closed then the Judge may pay the escrow to the Placer.\nIf the Bet is Closed then the Judge may pay the escrow to the Holder.\nIn any case, afterwards the Bet is terminated.\n\n",
+            "varnames": []
+          }
+        ],
+        "ret": []
+      },
+      {
+        "name": "Return",
+        "payable": false,
+        "statements": [
+          {
+            "stmt": {
+              "If": {
+                "cond": {
+                  "ops": [],
+                  "exprs": [
+                    {
+                      "Is": [
+                        "Bet",
+                        "isnot",
+                        {
+                          "ops": [],
+                          "terms": [
+                            {
+                              "ops": [],
+                              "factors": [
+                                {
+                                  "Sym": {
+                                    "sym": "closed",
+                                    "given": false,
+                                    "filler": ""
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "ontrue": [
+                  {
+                    "stmt": {
+                      "May": [
+                        "judge",
+                        [
+                          {
+                            "stmt": {
+                              "Return": [
+                                [
+                                  {
+                                    "ops": [],
+                                    "terms": [
+                                      {
+                                        "ops": [],
+                                        "factors": [
+                                          {
+                                            "Sym": {
+                                              "sym": "escrow",
+                                              "given": false,
+                                              "filler": "the "
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ],
+                                {
+                                  "sym": "placer",
+                                  "given": false,
+                                  "filler": "the "
+                                }
+                              ]
+                            },
+                            "fillers": [],
+                            "original": "return the escrow to the Placer",
+                            "varnames": []
+                          }
+                        ]
+                      ]
+                    },
+                    "fillers": [
+                      "the "
+                    ],
+                    "original": "the Judge may return the escrow to the Placer\n",
+                    "varnames": []
+                  }
+                ],
+                "onfalse": []
+              }
+            },
+            "fillers": [],
+            "original": "If the Bet is not Closed then the Judge may return the escrow to the Placer\n",
+            "varnames": []
+          }
+        ],
+        "ret": []
+      }
+    ],
+    "contracts": []
+  }
+]

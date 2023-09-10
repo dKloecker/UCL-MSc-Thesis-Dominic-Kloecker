@@ -1,0 +1,465 @@
+[
+  {
+    "name": "LEX",
+    "version": "0.2.20",
+    "comments": [
+      "3.f - an escrow that is controlled by a third party for a fee.\n\n"
+    ],
+    "toplevel_payable": true,
+    "term_payable": true,
+    "term_stmts": [
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Person"
+          }
+        },
+        "fillers": [],
+        "original": "\"Payer” is a person",
+        "varnames": [
+          "Payer"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Person"
+          }
+        },
+        "fillers": [],
+        "original": "\"Payee” is a person",
+        "varnames": [
+          "Payee"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Person"
+          }
+        },
+        "fillers": [],
+        "original": "\"Arbiter” is a person",
+        "varnames": [
+          "Arbiter"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Definition": {
+            "_type": "Amount"
+          }
+        },
+        "fillers": [],
+        "original": "\"Fee” is an amount",
+        "varnames": [
+          "Fee"
+        ]
+      },
+      {
+        "stmt": "Sequence",
+        "fillers": [],
+        "original": ".",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Pay": {
+            "who": {
+              "sym": "payer",
+              "given": false,
+              "filler": "The "
+            },
+            "from": null,
+            "exp": {
+              "ops": [],
+              "terms": [
+                {
+                  "ops": [],
+                  "factors": [
+                    {
+                      "Sym": {
+                        "sym": "amount",
+                        "given": false,
+                        "filler": "an"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "to": {
+              "sym": "escrow",
+              "given": false,
+              "filler": ""
+            }
+          }
+        },
+        "fillers": [],
+        "original": "The Payer pays an Amount into escrow",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "And": ","
+        },
+        "fillers": [],
+        "original": ",",
+        "varnames": []
+      },
+      {
+        "stmt": "Appoint",
+        "fillers": [
+          "the "
+        ],
+        "original": "appoints the Payee",
+        "varnames": [
+          "Payee"
+        ]
+      },
+      {
+        "stmt": {
+          "And": ","
+        },
+        "fillers": [],
+        "original": ",",
+        "varnames": []
+      },
+      {
+        "stmt": "Appoint",
+        "fillers": [
+          "the "
+        ],
+        "original": "appoints the Arbiter",
+        "varnames": [
+          "Arbiter"
+        ]
+      },
+      {
+        "stmt": {
+          "And": ","
+        },
+        "fillers": [],
+        "original": "and also",
+        "varnames": []
+      },
+      {
+        "stmt": {
+          "Fix": null
+        },
+        "fillers": [
+          "the "
+        ],
+        "original": "fixes the Fee ",
+        "varnames": [
+          "Fee"
+        ]
+      }
+    ],
+    "term_chpts": [
+      {
+        "name": "Pay_Out",
+        "payable": false,
+        "statements": [
+          {
+            "stmt": {
+              "May": [
+                "payer",
+                [
+                  {
+                    "stmt": {
+                      "Pay": {
+                        "who": null,
+                        "from": null,
+                        "exp": {
+                          "ops": [],
+                          "terms": [
+                            {
+                              "ops": [],
+                              "factors": [
+                                {
+                                  "Sym": {
+                                    "sym": "escrow",
+                                    "given": false,
+                                    "filler": "the "
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        "to": {
+                          "sym": "payee",
+                          "given": false,
+                          "filler": "the "
+                        }
+                      }
+                    },
+                    "fillers": [],
+                    "original": "pay the escrow to the Payee",
+                    "varnames": []
+                  }
+                ]
+              ]
+            },
+            "fillers": [
+              "The "
+            ],
+            "original": "The Payer may pay the escrow to the Payee.",
+            "varnames": []
+          },
+          {
+            "stmt": {
+              "May": [
+                "arbiter",
+                [
+                  {
+                    "stmt": {
+                      "Pay": {
+                        "who": null,
+                        "from": {
+                          "sym": "escrow",
+                          "given": false,
+                          "filler": ""
+                        },
+                        "exp": {
+                          "ops": [],
+                          "terms": [
+                            {
+                              "ops": [],
+                              "factors": [
+                                {
+                                  "Sym": {
+                                    "sym": "fee",
+                                    "given": false,
+                                    "filler": "the "
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        "to": {
+                          "sym": "themselves",
+                          "given": false,
+                          "filler": ""
+                        }
+                      }
+                    },
+                    "fillers": [],
+                    "original": "pay from escrow the Fee to themselves",
+                    "varnames": []
+                  },
+                  {
+                    "stmt": {
+                      "And": ","
+                    },
+                    "fillers": [],
+                    "original": "and afterwards",
+                    "varnames": []
+                  },
+                  {
+                    "stmt": {
+                      "Pay": {
+                        "who": null,
+                        "from": null,
+                        "exp": {
+                          "ops": [],
+                          "terms": [
+                            {
+                              "ops": [],
+                              "factors": [
+                                {
+                                  "Remainder": "escrow"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        "to": {
+                          "sym": "payee",
+                          "given": false,
+                          "filler": "the "
+                        }
+                      }
+                    },
+                    "fillers": [],
+                    "original": "pay the remainder of the escrow to the Payee",
+                    "varnames": []
+                  }
+                ]
+              ]
+            },
+            "fillers": [
+              "The "
+            ],
+            "original": "The Arbiter may pay from escrow the Fee to themselves,\nand afterwards pay the remainder of the escrow to the Payee.",
+            "varnames": []
+          }
+        ],
+        "ret": []
+      },
+      {
+        "name": "Pay_Back",
+        "payable": false,
+        "statements": [
+          {
+            "stmt": {
+              "May": [
+                "payee",
+                [
+                  {
+                    "stmt": {
+                      "Pay": {
+                        "who": null,
+                        "from": null,
+                        "exp": {
+                          "ops": [],
+                          "terms": [
+                            {
+                              "ops": [],
+                              "factors": [
+                                {
+                                  "Sym": {
+                                    "sym": "escrow",
+                                    "given": false,
+                                    "filler": "the "
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        "to": {
+                          "sym": "payer",
+                          "given": false,
+                          "filler": "the "
+                        }
+                      }
+                    },
+                    "fillers": [],
+                    "original": "pay the escrow to the Payer",
+                    "varnames": []
+                  }
+                ]
+              ]
+            },
+            "fillers": [
+              "The "
+            ],
+            "original": "The Payee may pay the escrow to the Payer.",
+            "varnames": []
+          },
+          {
+            "stmt": {
+              "May": [
+                "arbiter",
+                [
+                  {
+                    "stmt": {
+                      "Pay": {
+                        "who": null,
+                        "from": {
+                          "sym": "escrow",
+                          "given": false,
+                          "filler": ""
+                        },
+                        "exp": {
+                          "ops": [],
+                          "terms": [
+                            {
+                              "ops": [],
+                              "factors": [
+                                {
+                                  "Sym": {
+                                    "sym": "fee",
+                                    "given": false,
+                                    "filler": "the "
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        "to": {
+                          "sym": "themselves",
+                          "given": false,
+                          "filler": ""
+                        }
+                      }
+                    },
+                    "fillers": [],
+                    "original": "pay from escrow the Fee to themselves",
+                    "varnames": []
+                  },
+                  {
+                    "stmt": {
+                      "And": ","
+                    },
+                    "fillers": [],
+                    "original": "and afterwards",
+                    "varnames": []
+                  },
+                  {
+                    "stmt": {
+                      "Return": [
+                        [
+                          {
+                            "ops": [],
+                            "terms": [
+                              {
+                                "ops": [],
+                                "factors": [
+                                  {
+                                    "Remainder": "escrow"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        {
+                          "sym": "payer",
+                          "given": false,
+                          "filler": "the "
+                        }
+                      ]
+                    },
+                    "fillers": [],
+                    "original": "return the remainder of the escrow to the Payer",
+                    "varnames": []
+                  }
+                ]
+              ]
+            },
+            "fillers": [
+              "The "
+            ],
+            "original": "The Arbiter may pay from escrow the Fee to themselves,\nand afterwards return the remainder of the escrow to the Payer.",
+            "varnames": []
+          }
+        ],
+        "ret": []
+      }
+    ],
+    "contracts": []
+  }
+]
